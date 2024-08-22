@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades Curriculares</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="selected-unit" class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Unidade Curricular Selecionado:</h2>
+            </div>
+            <div class="card-body">
+                <div id="selected-unit-name" class="card-text"></div>
+            </div>
+        </div>
+    </div>
+    <div id="selected-unit" class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Avaliação Selecionada:</h2>
+            </div>
+            <div class="card-body">
+                <div id="selected-avaliacao-name" class="card-text"></div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="container">
+        <h1>Lista de Unidades Curriculares</h1>
+        <ul id="unit-list" class="list-group mb-3">
+            <!-- Itens da lista serão adicionados aqui -->
+        </ul>
+        <div class="input-group mb-3">
+            <input id="unidade-nome" type="text" class="form-control" placeholder="Nome da unidade curricular">
+            <select id="unidade-ano" class="form-control" placeholder="Ano curricular"></select>
+            <select id="unidade-semestre" type="number" class="form-control" placeholder="Semestre">
+                <option value="1">Semestre 1</option>
+                <option value="2">Semestre 2</option>
+            </select>
+            <div class="input-group-append">
+                <button class="btn btn-primary" id="add-button">Add</button>
+            </div>
+        </div>
+        
+
+        <div id="avaliacoes-section" class="d-none">     <!-- d-none oculta-->
+            <h2>Avaliações</h2>
+            <ul id="avaliacoes-list" class="list-group mb-3">
+                <!-- Avaliações serão adicionadas aqui -->
+            </ul>
+            <div class="input-group mb-3">
+                <input id="avaliacao-nome" type="text" class="form-control" placeholder="Nome da avaliação">
+                <div class="input-group-append">
+                    <button class="btn btn-secondary" id="add-avaliacao-button">Add Avaliação</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="registos-section" class="d-none">
+            <h3>Registos</h3>
+            <ul id="registos-list" class="list-group mb-3"></ul>
+            <h4>Adicionar Novo Registo</h4>
+            <form id="record-form">
+                <input type="date" id="record-day" placeholder="Dia" class="form-control mb-2">
+                <input type="time" id="record-start-time" placeholder="Hora de Início" class="form-control mb-2">
+                <input type="number" id="record-duration" placeholder="Duração (minutos)" class="form-control mb-2">
+                <button type="button" id="add-record-button" class="btn btn-primary"  onclick="addNewRecord()">Adicionar Registo</button>
+            </form>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

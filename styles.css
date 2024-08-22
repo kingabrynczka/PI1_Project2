@@ -1,0 +1,20 @@
+.avaliacao-name {
+    cursor: pointer !important;
+    transition: color 0.3s ease;
+}
+
+.avaliacao-name:hover {
+    color: green;
+    box-shadow: 0 0 5px green;
+}
+
+.unit-name {
+    cursor: pointer;
+    transition: color 0.3s ease; 
+}
+
+.unit-name:hover {
+    color: green; 
+    box-shadow: 0 0 5px green;
+}
+
